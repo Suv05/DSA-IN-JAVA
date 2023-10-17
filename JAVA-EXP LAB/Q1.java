@@ -1,9 +1,9 @@
-import java.util.Date;
+import java.util.*;
 
 public class Q1 {
     public static void main(String[] args) {
         System.out.println("Hello world");
-        Date time=new Date();
-        System.out.println();
+        String s = "tony";
+        System.out.println(s.toUpperCase());
     }
 }
