@@ -10,8 +10,15 @@ public class getIthBit {
     }
 
     public static int setBit(int n, int i) {
-        int bitmask = 1 << i;
-        return (n | bitmask);
+        //Always set its value to 1
+
+//        int bitmask = 1 << i;
+//        return (n | bitmask);
+
+        //For set value to 0
+        int bitmask = ~(1 << i);
+        return (n & bitmask);
+
     }
 
     public static int clearBit(int n, int i) {
@@ -28,9 +35,10 @@ public class getIthBit {
     }
 
     public static void main(String[] args) {
-        System.out.println(getBit(11, 2));
-        System.out.println(setBit(10, 2));
-        System.out.println(clearBit(10, 1));
-        System.out.println(update(10,2,1));
+//        System.out.println(getBit(11, 2));
+        System.out.println(setBit(10, 1));
+//        System.out.println(clearBit(10, 1));
+//        System.out.println(update(10,2,1));
+
     }
 }
