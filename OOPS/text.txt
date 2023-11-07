@@ -1,0 +1,1 @@
+there is concept of descture in java bcz here it is garbeg collector who does the works by collecting unused memory spaces
