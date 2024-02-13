@@ -10,7 +10,7 @@ public class tilingProblem {
     }
 
     public static void main(String[] args) {
-        System.out.println(noOfWays(2));
+        System.out.println(noOfWays(5));
 
     }
 }
