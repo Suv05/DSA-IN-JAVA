@@ -78,6 +78,25 @@ public class LinkedList {
     }
 
 
+    //remove first
+    public int removeFirst() {
+        if (size == 0) {
+            System.out.println("Linked list is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            return val;
+        }
+
+        int val = head.data;
+        head = head.next; //now head moves to the second node
+        size--;
+        return val;
+
+
+    }
+
     //print the list
     public void print() {
         //assign head address to a temp variable
@@ -88,7 +107,7 @@ public class LinkedList {
         }
 
         while (temp != null) {
-            System.out.print(temp.data + " " + "->");
+            System.out.print(temp.data + "-> ");
             temp = temp.next;
         }
         System.out.println(" ");
@@ -104,6 +123,9 @@ public class LinkedList {
         ll.addLast(4);
         ll.addLast(5);
         ll.add(100, 2);
+        ll.print();
+        System.out.println("Linked List size-> " + size);
+        ll.removeFirst();
         ll.print();
         System.out.println("Linked List size-> " + size);
 
