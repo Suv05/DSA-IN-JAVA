@@ -97,6 +97,9 @@ public class LinkedList {
 
     }
 
+    //remove last
+
+
     //print the list
     public void print() {
         //assign head address to a temp variable
