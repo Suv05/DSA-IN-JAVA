@@ -123,6 +123,24 @@ public class LinkedList {
 
     }
 
+    //search in Linked list
+    public int itrSearch(int key) {
+        Node temp = head;
+        int i = 0;
+
+        while (temp != null) {
+            if (temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+
+        //if not found return
+        return -1;
+
+    }
+
 
     //print the list
     public void print() {
@@ -153,10 +171,8 @@ public class LinkedList {
         ll.print();
         System.out.println("Linked List size-> " + size);
         //ll.removeFirst();
-        ll.removeLast();
-        ll.print();
-        System.out.println("Linked List size-> " + size);
-
+        //ll.removeLast();
+        System.out.println("Present index at: "+ll.itrSearch(100));
 
     }
 }
