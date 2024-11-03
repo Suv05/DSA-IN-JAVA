@@ -160,7 +160,6 @@ public class LinkedList {
         return helper(key, head);
     }
 
-
     //print the list
     public void print() {
         //assign head address to a temp variable
@@ -178,6 +177,21 @@ public class LinkedList {
     }
 
 
+    //reverse the linked list
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+        Node next = null;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
+
     public static void main(String[] args) {
 
         LinkedList ll = new LinkedList();
@@ -188,11 +202,14 @@ public class LinkedList {
         ll.addLast(5);
         ll.add(100, 2);
         ll.print();
-        System.out.println("Linked List size-> " + size);
+        //System.out.println("Linked List size-> " + size);
         //ll.removeFirst();
         //ll.removeLast();
         //System.out.println("Present index at: " + ll.itrSearch(100));
-        System.out.println("Present index at: " + ll.recSearch(100));
+        //System.out.println("Present index at: " + ll.recSearch(100));
+
+        ll.reverse();
+        ll.print();
 
     }
 }
