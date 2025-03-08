@@ -1,3 +1,5 @@
+//Stack implementation using array list
+
 import java.util.ArrayList;
 
 public class StackA {
@@ -34,7 +36,6 @@ public class StackA {
     }
 
     public static void main(String[] args) {
-        Stack s = new Stack();
         Stack.push(1);
         Stack.push(2);
         Stack.push(3);
@@ -43,7 +44,5 @@ public class StackA {
             Stack.peek();
             System.out.println(Stack.pop());
         }
-
-
     }
 }
