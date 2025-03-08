@@ -1,3 +1,5 @@
+//Stack implementation using array list
+
 import java.util.ArrayList;
 
 public class StackA {
