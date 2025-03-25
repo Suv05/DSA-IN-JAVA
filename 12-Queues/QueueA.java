@@ -29,10 +29,13 @@ public class QueueA {
                 return;
             }
             int front = arr[0];
-            for (int i = 0; i < arr.length; i++) {
-                arr[i] = arr[i+1];
+            for (int i = 0; i < rear; i++) { //Iterate up to 'rear'
+                arr[i] = arr[i + 1];
             }
-            System.out.println("deleted item: "+front);
+            if (rear >= 0) { // Decrement rear only if the queue is not empty
+                rear--;
+            }
+            System.out.println("deleted item: " + front);
         }
 
         public int peek() {
